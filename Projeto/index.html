@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Loja Bagunçada</title>
-<link rel="stylesheet" href="css/app.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loja de Móveis</title>
 <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
-<img src="assets/logo.png" id="logo">
-<nav>
-<ul>
-<li><a href="index.html">Início</a></li>
-<li><a href="contato.html">Contato</a></li>
-</ul>
-</nav>
+  <div class="container">
+    <h1>Loja Geral</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
 <main>
-<section id="produtos">
-<h1>Produtos</h1>
-<div class="card" data-id="1">
-<h2 class="title">Mesa</h2>
-<p class="price">R$ 1200</p>
-<button onclick="editar(1)">Editar</button>
-<button onclick="excluir(1)">Excluir</button>
-</div>
-<div class="card" data-id="2">
-<h2 class="title">Cadeira</h2>
-<p class="price">R$ 300</p>
-<button onclick="editar(2)">Editar</button>
-<button onclick="excluir(2)">Excluir</button>
-</div>
-</section>
-<aside>
-<form id="novo" method="post">
-<label>Nome<input type="text" name="nome"></label>
-<label>Preço<input type="text" name="preco"></label>
-<button type="submit">Salvar</button>
-</form>
-</aside>
+  <section id="produtos">
+    <h2>Produtos</h2>
+    <div id="mensagem"></div>
+    <div id="lista-produtos">
+      <div class="card" data-id="1">
+        <h3 class="title">Mesa</h3>
+        <p class="price">R$ 1.200,00</p>
+        <div class="card-actions">
+          <button class="btn-editar" onclick="editar(1)">Editar</button>
+          <button class="btn-excluir" onclick="excluir(1)">Excluir</button>
+        </div>
+      </div>
+      <div class="card" data-id="2">
+        <h3 class="title">Cadeira</h3>
+        <p class="price">R$ 300,00</p>
+        <div class="card-actions">
+          <button class="btn-editar" onclick="editar(2)">Editar</button>
+          <button class="btn-excluir" onclick="excluir(2)">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside>
+    <h2>Novo Produto</h2>
+    <form id="novo">
+      <label>
+        Nome
+        <input type="text" name="nome" id="nome" required>
+      </label>
+      <label>
+        Preço
+        <input type="number" name="preco" id="preco" step="0.01" min="0" required>
+      </label>
+      <button type="submit">Salvar</button>
+    </form>
+  </aside>
+</main>
+
 <footer>
-<p>© Loja Bagunçada</p>
+  <p>© Loja Geral</p>
 </footer>
+
 <script src="js/main.js"></script>
-<script src="js/style.js"></script>
 </body>
 </html>
