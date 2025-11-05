@@ -1,20 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<title>Contato</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato - Loja Geral</title>
 <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/app.css">  
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1>Fale Conosco</h1>
-<form id="fale" action="">
-<input type="text" name="nome" id="nome" placeholder="Seu nome">
-<input type="email" name="email" id="email" placeholder="Seu email">
-<textarea name="mensagem" id="mensagem" placeholder="Sua mensagem"></textarea>
-<button type="submit">Enviar</button>  
-</form>
+<header>
+  <div class="container">
+    <h1>Loja Geral</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="contato">
+    <h2>Fale Conosco</h2>
+    <div id="mensagem"></div>
+    <form id="fale">
+      <label>
+        Nome
+        <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" id="email" placeholder="Seu email" required>
+      </label>
+      <label>
+        Mensagem
+        <textarea name="mensagem" id="mensagem-texto" placeholder="Sua mensagem" rows="5" required></textarea>
+      </label>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© Loja Geral</p>
+</footer>
+
 <script src="js/utils.js"></script>
-<script src="js/style.js"></script>  
 </body>
 </html>

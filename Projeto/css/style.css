@@ -46,6 +46,20 @@ section#produtos h2 {
   gap: 10px;
 }
 
+/* Seção de Contato */
+section#contato {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-width: 600px;
+}
+
+section#contato h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
 /* Formulário */
 aside {
   background: #fff;
@@ -66,13 +80,20 @@ form label {
   font-weight: bold;
 }
 
-form input {
+form input,
+form textarea {
   display: block;
   width: 100%;
   padding: 8px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  font-family: Arial, sans-serif;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 button {
