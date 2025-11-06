@@ -39,7 +39,7 @@ Interface moderna com tema escuro inspirado em GitHub, incluindo:
 
 ## 📁 Estrutura do Projeto
 
-
+```
 Projeto/
 ├── index.html              # Página principal (produtos)
 ├── contato.html           # Página de contato
@@ -52,7 +52,7 @@ Projeto/
 └── js/
     ├── main.js           # Lógica dos produtos
     └── utils.js          # Utilitários e contato
-
+```
 
 ## 🔧 Como Usar
 
