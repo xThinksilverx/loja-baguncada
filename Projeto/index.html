@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ctrl+Tudo</title>
 <link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/app.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<style>
+@import url('css/reset.css');
+@import url('css/app.css');
+@import url('css/style.css');
+</style>
 </head>
 <body>
 <header>
@@ -29,24 +32,23 @@
   <section id="produtos">
     <h2>Produtos</h2>
     <div id="mensagem"></div>
-    <div id="lista-produtos">
-      <div class="card" data-id="1">
-        <h3 class="title">Mesa</h3>
-        <p class="price">R$ 1.200,00</p>
-        <div class="card-actions">
-          <button class="btn-editar" onclick="editar(1)">Editar</button>
-          <button class="btn-excluir" onclick="excluir(1)">Excluir</button>
-        </div>
-      </div>
-      <div class="card" data-id="2">
-        <h3 class="title">Cadeira</h3>
-        <p class="price">R$ 300,00</p>
-        <div class="card-actions">
-          <button class="btn-editar" onclick="editar(2)">Editar</button>
-          <button class="btn-excluir" onclick="excluir(2)">Excluir</button>
-        </div>
-      </div>
+    
+    <div class="filtros">
+      <input 
+        type="text" 
+        id="busca" 
+        placeholder="Buscar produtos..."
+        autocomplete="off"
+      >
+      <select id="ordenacao">
+        <option value="nome-asc">Nome (A-Z)</option>
+        <option value="nome-desc">Nome (Z-A)</option>
+        <option value="preco-asc">Preço (Menor)</option>
+        <option value="preco-desc">Preço (Maior)</option>
+      </select>
     </div>
+    
+    <div id="lista-produtos"></div>
   </section>
 
   <aside>
