@@ -11,6 +11,19 @@ header .container {
   align-items: center;
 }
 
+/* Logo e Título */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
 header h1 {
   font-size: 24px;
   color: #fff;
@@ -205,5 +218,9 @@ footer {
   header .container {
     flex-direction: column;
     gap: 10px;
+  }
+  
+  .logo {
+    height: 40px;
   }
 }
